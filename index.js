@@ -12,13 +12,15 @@ function getDogImages() {
 }
 
 function displayResults(responseJson) {
-  console.log(responseJson);
+  $('.results').empty();
   for (let i=0; i < responseJson.message.length; i++) {
     $('.results').append(
       `<img src="${responseJson.message[i]}" class="results-img">`
     )
   }
   $('.results').removeClass('hidden');
+  console.log(responseJson.message);
+  //console.log('https://cdn.pixabay.com/photo/2017/11/04/22/18/dog-2919014_640.jpg');
 }
 
 function watchForm() {
